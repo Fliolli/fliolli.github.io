@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ООО Инерта</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+<div class="header-container">
+<div class="logo">ООО «Инерта»</div>
+
+<nav>
+<a href="#products">Продукция</a>
+<a href="#delivery">Оплата и доставка</a>
+<a href="price.html">Цены</a>
+<a href="#contacts">Контакты</a>
+<a href="#form" class="btn">Оставить заявку</a>
+</nav>
+
+<div class="contact-info">
+8-951-031-90-52<br>
+55-25-95<br>
+inertallc@gmail.com
+</div>
+</div>
+
+<div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+</header>
+
+<div class="mobile-menu">
+    <a href="#products">Продукция</a>
+    <a href="#delivery">Оплата и доставка</a>
+    <a href="prices.html">Цены</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#form">Оставить заявку</a>
+    </div>
+
+<section class="hero">
+<div class="container">
+<h1>Качественный нержавеющий металлопрокат от ООО «Инерта»</h1>
+<p>
+Мы предлагаем строительным компаниям, организациям и частным лицам снабжение металлопрокатом.
+Продажа металлопроката является одним из приоритетных направлений нашей компании.
+</p>
+</div>
+</section>
+
+<section id="products" class="products">
+<div class="container">
+<h2>Металл в наличии</h2>
+
+<div class="product-grid">
+<a href="steel.html" class="product-item">
+<div>AISI 304</div>
+<div>Листы</div>
+</a>
+
+<a href="steel.html" class="product-item">
+<div>AISI 430</div>
+<div>Листы</div>
+</a>
+</div>
+</div>
+</section>
+
+<section id="form" class="form-section">
+<div class="container">
+<h2>Заявка на приобретение металла</h2>
+
+<form action="https://formsubmit.co/inertallc@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <textarea name="message" placeholder="Укажите интересующий Вас металлопрокат и требуемое количество" required></textarea>
+    <input type="text" name="phone" placeholder="Телефон" required>
+    <button type="submit">Отправить заявку</button>
+    </form>
+
+<p style="margin-top:20px;">
+Либо свяжитесь с нами по номеру 8 951-031-90-52 или 55-25-95.
+Принимаем заказы пн-пт с 10:00 до 17:00.
+</p>
+
+</div>
+</section>
+
+<section id="delivery" class="delivery fade-in">
+<div class="container">
+<h2>Оплата</h2>
+<p>Оплата картой, СБП и на расчетный счет организации (без НДС)</p>
+
+<h2 style="margin-top:30px;">Доставка</h2>
+<p>Самовывоз: г. Оренбург, Беляевское шоссе, 15.</p>
+<p>При покупке 3-х и более листов — БЕСПЛАТНАЯ доставка по Оренбургу.</p>
+</div>
+</section>
+
+<section id="contacts" class="contacts">
+<div class="contact-left">
+<h2>Контакты</h2>
+<p>ООО «Инерта»</p>
+<p>Оренбург, Беляевское шоссе 15</p>
+<p>Время работы: 10:00 - 17:00</p>
+<p>Email: inertallc@gmail.com</p>
+<p>Телефон: 8-951-031-90-52, 55-25-95 (3532)</p>
+</div>
+
+<div class="contact-right">
+<img src="map.gif" alt="Карта">
+</div>
+</section>
+
+<footer>
+<div class="footer-container">
+<div>
+<a href="#products">Продукция</a>
+<a href="#delivery">Оплата и доставка</a>
+<a href="price.html">Цены</a>
+<a href="#contacts">Контакты</a>
+</div>
+
+<div>
+<p>ООО «Инерта»</p>
+<p>Оренбург, Беляевское шоссе 15</p>
+<p>8-951-031-90-52</p>
+</div>
+
+<div>
+<a href="https://vk.com/metall56ru">ВКонтакте</a>
+<a href="#">Telegram</a>
+</div>
+</div>
+</footer>
+
+<script>
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    
+    burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+    
+    const faders = document.querySelectorAll(".fade-in");
+    
+    const appearOptions = {
+        threshold: 0.3
+    };
+    
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+    
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+    </script>
+
+</body>
+</html>
