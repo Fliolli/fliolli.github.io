@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Нержавеющие стали</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -61,32 +60,5 @@ inertallc@gmail.com
 </div>
 </footer>
 
-<script>
-    const burger = document.querySelector(".burger");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    
-    burger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-    });
-    
-    const faders = document.querySelectorAll(".fade-in");
-    
-    const appearOptions = {
-        threshold: 0.3
-    };
-    
-    const appearOnScroll = new IntersectionObserver(function(entries, observer){
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-    
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-    </script>
-    
 </body>
 </html>
