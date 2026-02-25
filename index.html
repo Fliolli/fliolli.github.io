@@ -21,6 +21,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,8 +43,21 @@
         +7 (3532) 55-25-95<br>
         inertallc@gmail.com
       </div>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
+
+  <div class="mobile-menu">
+    <a href="#products">Продукция</a>
+    <a href="#delivery">Оплата и доставка</a>
+    <a href="prices.html">Цены</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#form">Оставить заявку</a>
+  </div>
 
   <section class="hero">
     <div class="container">
@@ -55,7 +69,7 @@
     </div>
   </section>
 
-  <section class="about-short fade-in">
+  <section class="about-short">
     <div class="container">
 
       <h3 class="section-title">Компания ООО «ИНЕРТА» сотрудничает с проверенными поставщиками на выгодных условиях и
@@ -102,7 +116,7 @@
     </div>
   </section>
 
-  <section id="products" class="products">
+  <section id="products" class="products fade-in">
     <div class="container">
       <h2>Металл в наличии</h2>
 
@@ -120,7 +134,7 @@
     </div>
   </section>
 
-  <section id="delivery" class="delivery">
+  <section id="delivery" class="delivery fade-in">
     <div class="container">
       <h2>Оплата</h2>
       <p>Картой, через СБП или на расчетный счет организации (без НДС)</p>
@@ -132,7 +146,7 @@
     </div>
   </section>
 
-  <section id="form" class="form-section">
+  <section id="form" class="form-section fade-in">
     <div class="container">
       <h2>Заявка на приобретение металла</h2>
 
@@ -168,7 +182,7 @@
     </div>
   </section>
 
-  <section id="contacts" class="contacts">
+  <section id="contacts" class="contacts fade-in">
     <div class="contact-left">
       <h2>Контакты</h2>
       <p>ООО «ИНЕРТА»</p>
@@ -226,6 +240,33 @@
      }
     }
     </script>
+
+  <script>
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    burger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+
+    const faders = document.querySelectorAll(".fade-in");
+
+    const appearOptions = {
+      threshold: 0.3
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 
 </body>
 
