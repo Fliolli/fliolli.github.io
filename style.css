@@ -123,21 +123,26 @@ nav a:hover::after {
     right: -100%;
     width: 280px;
     height: 100%;
-    background: #D9D9D9;
+    background: #f5f5f5;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
     color: #D9D9D9;
-    padding: 150px 30px;
+    padding: 120px 30px;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
     z-index: 500;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .mobile-menu a {
     color: #111;
     text-decoration: none;
     margin-bottom: 25px;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -365,7 +370,13 @@ form button:hover {
 .contacts {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.contacts img {
+    width: 700px;
+    height: auto;
 }
 
 .contacts h2 {
@@ -377,6 +388,10 @@ form button:hover {
 .contacts p {
     font-size: 18px;
     font-weight: 400;
+}
+
+.contact-right {
+    align-content: center;
 }
 
 /* ===== FOOTER ===== */
@@ -393,8 +408,8 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-container p {
@@ -424,13 +439,13 @@ footer {
     border-radius: 50%;
 }
 
-a {
+.lincs a {
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
 }
 
-a:hover {
+.lincs a:hover {
     color: #D9D9D9;
 }
 
@@ -463,6 +478,10 @@ a:hover {
         display: none;
     }
 
+    .contact-info {
+        display: none;
+    }
+
     .burger {
         display: flex;
     }
@@ -482,6 +501,22 @@ a:hover {
         gap: 60px;
     }
 
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts img {
+        max-width: 350px;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
 }
 
 /* ===== PREMIUM BUTTON MICRO-ANIMATION ===== */
