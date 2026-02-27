@@ -185,7 +185,7 @@ section {
     max-width: 650px;
     margin: auto;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* ===== PRODUCTS ===== */
@@ -196,8 +196,8 @@ section {
 }
 
 .products h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
 }
 
 .product-grid {
@@ -248,7 +248,7 @@ section {
     max-width: 800px;
     line-height: 1.4;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 auto 70px;
 }
 
@@ -291,7 +291,7 @@ section {
 .about-item h3 {
     color: #111;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* ===== DELIVERY ===== */
@@ -304,13 +304,13 @@ section {
 
 .delivery h2 {
     margin-bottom: 5px;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 .delivery p {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* ===== FORM ===== */
@@ -323,16 +323,16 @@ section {
 
 .form-section h2 {
     margin: 0 auto 15px;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
     text-align: center;
 }
 
 .form-section h3 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0px auto;
-    max-width: 750px;
+    max-width: 700px;
     text-align: center;
 }
 
@@ -385,8 +385,8 @@ form button:hover {
 
 .contacts h2 {
     margin-bottom: 5px;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 .contacts p {
