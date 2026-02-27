@@ -451,10 +451,78 @@ footer {
 
 /* ===== PRICE PAGE ===== */
 
+.price-wrapper {
+    padding: 50px 20px 30px;
+    overflow-x: auto;
+}
+
 .price-table {
-    display: flex;
-    justify-content: center;
-    gap: 70px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.06);
+    font-size: 15px;
+}
+
+.price-table thead {
+    background: #f5f5f5;
+}
+
+.price-table th {
+    padding: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.price-table td {
+    padding: 16px 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.price-table th:first-child,
+.price-table td:first-child {
+    text-align: left;
+    width: 60px;
+    color: #0000009a;
+}
+
+.price-table th:not(:first-child),
+.price-table td:not(:first-child) {
+    text-align: center;
+}
+
+.price-table tr:not(:last-child) td {
+    border-bottom: 1px solid #eee;
+}
+
+.price-table th:not(:last-child),
+.price-table td:not(:last-child) {
+    border-right: 1px solid #f0f0f0;
+}
+
+.price-table tbody tr:hover {
+    background: rgba(228, 153, 0, 0.05);
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+
+    .price-table {
+        font-size: 14px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 12px;
+    }
+
 }
 
 /* ===== BACK BUTTON ===== */
@@ -469,6 +537,9 @@ footer {
     text-decoration: none;
     letter-spacing: 1px;
     transition: 0.3s;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 60px;
 }
 
 .back-btn:hover {
