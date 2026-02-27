@@ -291,6 +291,7 @@ section {
 .delivery {
     display: flex;
     justify-content: center;
+
 }
 
 .delivery h2 {
@@ -382,7 +383,7 @@ form button:hover {
 
 footer {
     color: #fff;
-    padding: 70px 0;
+    padding: 30px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/base_background.jpg');
     /*background-size: cover;
     background-position: center;*/
@@ -392,8 +393,8 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
-    gap: 70px;
+    justify-content: center;
+    gap: 150px;
 }
 
 .footer-container p {
@@ -424,13 +425,13 @@ footer {
 }
 
 a {
-  text-decoration: none;
-  color: #fff;           
-  transition: 0.3s;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
 }
 
 a:hover {
-  color: #D9D9D9;       
+    color: #D9D9D9;
 }
 
 /* ===== PRICE PAGE ===== */
