@@ -417,36 +417,32 @@ footer {
     font-weight: 500;
 }
 
-.lincs {
+.social_networks_lincs {
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-.icon-linc-item {
-    margin-left: 0;
-    margin-bottom: 10px;
+.social_network-linc-item {
+    margin-bottom: 7px;
     display: flex;
     align-items: center;
 }
 
-.icon-linc-item img {
-    width: 26px;
-    height: 26px;
-    object-fit: contain;
-    margin-right: 10px;
-    background: #E49900;
-    border-radius: 50%;
+.social_network-linc-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
 }
 
-.lincs a {
+.social_networks_lincs a {
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
 }
 
-.lincs a:hover {
-    color: #D9D9D9;
+.social_networks_lincs a:hover {
+    color: #eddfb5;
 }
 
 /* ===== PRICE PAGE ===== */
