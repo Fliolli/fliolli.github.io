@@ -270,12 +270,15 @@ section {
 }
 
 .product-grid p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .product-item {
-    background: #919191;
+    background-color: #919191;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/metall.jpg');
+    background-repeat: no-repeat;
+    background-color: #111;
     color: #fff;
     width: 230px;
     height: 150px;
