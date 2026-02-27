@@ -41,7 +41,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 30px;
+    padding: 15px 30px;
 }
 
 .logo {
@@ -362,6 +362,7 @@ form input {
     margin: 7px auto 70px;
     border: none;
     cursor: pointer;
+    padding: 16px 26px;
 }
 
 form button:hover {
@@ -454,6 +455,24 @@ footer {
     display: flex;
     justify-content: center;
     gap: 70px;
+}
+
+/* ===== BACK BUTTON ===== */
+
+.back-btn {
+    background: #E49900;
+    color: #fff !important;
+    padding: 12px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #E49900;
 }
 
 /* ===== ANIMATION ON SCROLL ===== */
@@ -549,8 +568,7 @@ form button:active,
 
 /* световой блик */
 .btn::before,
-form button::before,
-.back-btn::before {
+form button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -567,7 +585,6 @@ form button::before,
 
 /* анимация блика */
 .btn:hover::before,
-form button:hover::before,
-.back-btn:hover::before {
+form button:hover::before {
     left: 130%;
 }
