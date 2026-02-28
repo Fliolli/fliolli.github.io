@@ -109,21 +109,21 @@
 
         <div class="about-item">
           <div class="about-icon">
-            <img src="./images/icon_price.png">
+            <img src="./images/icon_price.png" alt="Выгодные цены" loading="lazy">
           </div>
           <h3>Лучшие цены на весь представленный ассортимент</h3>
         </div>
 
         <div class="about-item">
           <div class="about-icon">
-            <img src="./images/icon_delivery.png">
+            <img src="./images/icon_delivery.png" alt="Быстрая доставка точно в срок" loading="lazy">
           </div>
           <h3>Своевременную и стабильную доставку металла на объект клиента</h3>
         </div>
 
         <div class="about-item">
           <div class="about-icon">
-            <img src="./images/icon_quality.png">
+            <img src="./images/icon_quality.png" alt="Высокое качество" loading="lazy">
           </div>
           <h3>Продукцию, полностью соответствующую заявленным характеристикам</h3>
         </div>
@@ -155,13 +155,13 @@
             <p>Перечислите нужные позиции в указанном формате: <span class="red">*</span></p>
             <textarea placeholder="Марка металла — Размер листа — Количество листов"></textarea>
 
-            <p>Имя <span class="red">*</span></p>
-            <input type="text" placeholder="Ваше имя">
-
             <p>Телефон <span class="red">*</span></p>
             <input type="text" placeholder="Ваш номер телефона">
 
-            <p>E-mail <span class="red">*</span></p>
+            <p>Имя</p>
+            <input type="text" placeholder="Ваше имя">
+
+            <p>E-mail</p>
             <input type="text" placeholder="Адрес электронной почты">
 
             <button type="submit" class="btn form-button">
@@ -172,15 +172,12 @@
 
         <div class="form-right">
           <h2>Либо позвоните нам</h2>
+          <a href="tel:+79510319052">+7 (951) 031-90-52</a>
+          <a href="tel:+73532552595">55-25-95 (доб. 3532)</a>
           <h3>
-            +7 (951) 031-90-52<br>
-            55-25-95 (доб. 3532)
-          </h3>
-
-          <p>
             Мы принимаем заказы по будням с 10:00 до 17:00. Сообщите менеджеру нужные позиции и объём — специалист
             сориентирует по стоимости и срокам.
-          </p>
+          </h3>
         </div>
 
       </div>
@@ -189,7 +186,7 @@
 
   <section id="contacts" class="contacts fade-in">
     <div class="contact-left">
-      <img src="./images/map.png" alt="Склад ООО «ИНЕРТА» в г. Оренбург" loading="lazy">
+      <img src="./images/map.png" alt="Склад самовывоза ООО «ИНЕРТА» в г. Оренбург" loading="lazy">
     </div>
 
     <div class="contact-right">
@@ -197,8 +194,8 @@
       <p>ООО «ИНЕРТА»</p>
       <p>г. Оренбург, ул. Беляевское шоссе, д. 15</p>
       <p>Режим работы: Пн–Пт: 10:00—17:00</p>
-      <p>Телефон #1: +7 (951) 031-90-52</p>
-      <p>Телефон #2: 55-25-95 (доб. 3532)</p>
+      <a href="tel:+79510319052">+7 (951) 031-90-52</a><br>
+      <a href="tel:+73532552595">55-25-95 (доб. 3532)</a>
       <p>Email: inertallc@gmail.com</p>
     </div>
   </section>
@@ -212,17 +209,17 @@
       </div>
       <div class="social_networks_lincs">
         <div class="social_network-linc-item">
-          <img src="./images/icon-vk.svg">
+          <img src="./images/icon-vk.svg" alt="Магазин во ВКонтакте (ВК | VK)" loading="lazy">
           <a href="https://vk.com/metall56ru">ВКонтакте</a>
         </div>
         <div class="social_network-linc-item">
-          <img src="./images/icon-telegram.svg">
+          <img src="./images/icon-telegram.svg" alt="Магазин в Telegram (TG | Телеграм)" loading="lazy">
           <a href="#">Telegram</a>
         </div>
       </div>
       <div>
-        <p>+7 (951) 031-90-52</p>
-        <p>55-25-95 (доб. 3532)</p>
+        <a href="tel:+79510319052">+7 (951) 031-90-52</a><br>
+        <a href="tel:+73532552595">55-25-95 (доб. 3532)</a>
         <p>inertallc@gmail.com</p>
       </div>
     </div>
@@ -231,7 +228,7 @@
   <script type="application/ld+json">
     {
      "@context": "https://schema.org",
-     "@type": "Organization",
+     "@type": "LocalBusiness",
      "name": "ООО «ИНЕРТА»",
      "url": "https://www.metall-56.ru",
      "logo": "https://www.metall-56.ru/images/logo.png",
@@ -247,44 +244,12 @@
        "addressLocality": "Оренбург",
        "streetAddress": "ул. Беляевское шоссе, д. 15",
        "addressCountry": "RU"
-     }
+     },
+     "openingHours": "Mo-Fr 10:00-17:00"
     }
     </script>
 
-  <script>
-    const burger = document.querySelector(".burger");
-    const mobileMenu = document.querySelector(".mobile-menu");
-
-    burger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("active");
-      document.body.classList.toggle("menu-open");
-    });
-
-    document.querySelectorAll(".mobile-menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-        document.body.classList.remove("menu-open");
-      });
-    });
-
-    const faders = document.querySelectorAll(".fade-in");
-
-    const appearOptions = {
-      threshold: 0.3
-    };
-
-    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 

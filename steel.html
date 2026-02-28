@@ -86,10 +86,10 @@
             </div>
             <div class="social_networks_lincs">
                 <div class="social_network-linc-item">
-                    <img src="./images/icon-vk.svg">
+                    <img src="./images/icon-vk.svg" alt="Магазин во ВКонтакте (ВК | VK)">
                     <a href="https://vk.com/metall56ru">ВКонтакте</a>
                 </div>
-                <div class="social_network-linc-item">
+                <div class="social_network-linc-item" alt="Магазин в Telegram (TG | Телеграм)">
                     <img src="./images/icon-telegram.svg">
                     <a href="#">Telegram</a>
                 </div>
@@ -102,40 +102,7 @@
         </div>
     </footer>
 
-    <script>
-        const burger = document.querySelector(".burger");
-        const mobileMenu = document.querySelector(".mobile-menu");
-
-        burger.addEventListener("click", () => {
-            mobileMenu.classList.toggle("active");
-            document.body.classList.toggle("menu-open");
-        });
-
-        document.querySelectorAll(".mobile-menu a").forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-                document.body.classList.remove("menu-open");
-            });
-        });
-
-        const faders = document.querySelectorAll(".fade-in");
-
-        const appearOptions = {
-            threshold: 0.3
-        };
-
-        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
