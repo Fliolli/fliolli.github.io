@@ -111,6 +111,13 @@
             document.body.classList.toggle("menu-open");
         });
 
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            });
+        });
+
         const faders = document.querySelectorAll(".fade-in");
 
         const appearOptions = {
