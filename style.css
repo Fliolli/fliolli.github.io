@@ -218,7 +218,6 @@ section {
 }
 
 .product-item {
-    background-color: #919191;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/metall.jpg');
     background-repeat: no-repeat;
     background-color: #111;
@@ -261,7 +260,7 @@ section {
 .about-item {
     flex: 1;
     max-width: 280px;
-    margin: 0, auto;
+    margin: 0 auto;
     transition: 0.4s;
 }
 
