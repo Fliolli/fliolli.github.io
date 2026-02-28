@@ -146,38 +146,44 @@
 
   <section id="form" class="form-section fade-in">
     <div class="container">
-      <h2>Оформите заявку</h2>
 
-      <form>
-        <p>
-          Перечислите нужные позиции в указанном формате:
-        </p>
-        <textarea placeholder="Марка металла — Размер листа — Количество листов" style="max-width: 500px;"></textarea>
-        <p>
-          Имя
-        </p>
-        <input type="text" placeholder="Ваше Имя">
-        <p>
-          Телефон
-        </p>
-        <input type="text" placeholder="Ваш номер телефона">
-        <p>
-          E-mail
-        </p>
-        <input type="text" placeholder="Адрес вашей электронной почты">
-        <button type="submit" class="btn form-button">ОТПРАВИТЬ ЗАЯВКУ</button>
-      </form>
+      <div class="form-wrapper">
 
-      <h2>Либо позвоните нам по телефону</h2>
-      <h3 style="margin-bottom: 10px; font-weight: 650;">
-        +7 (951) 031-90-52 или 55-25-95 (доб. 3532)<br>Мы принимаем заказы по будням с 10:00 до 17:00.
-      </h3>
-      <h3>
-        Сообщите менеджеру какие позиции и в каком объеме вам нужны. Наш специалист ответит на все ваши вопросы,
-        сориентирует по стоимости и срокам выполнения заказа, а затем вышлет счет на оплату. Произведите оплату и
-        получите Ваш металлопрокат!
-      </h3>
+        <div class="form-left">
+          <h2>Оформите заявку</h2>
+          <form>
+            <p>Перечислите нужные позиции в указанном формате: <span class="red">*</span></p>
+            <textarea placeholder="Марка металла — Размер листа — Количество листов"></textarea>
 
+            <p>Имя <span class="red">*</span></p>
+            <input type="text" placeholder="Ваше имя">
+
+            <p>Телефон <span class="red">*</span></p>
+            <input type="text" placeholder="Ваш номер телефона">
+
+            <p>E-mail <span class="red">*</span></p>
+            <input type="text" placeholder="Адрес электронной почты">
+
+            <button type="submit" class="btn form-button">
+              ОТПРАВИТЬ ЗАЯВКУ
+            </button>
+          </form>
+        </div>
+
+        <div class="form-right">
+          <h2>Либо позвоните нам</h2>
+          <h3>
+            +7 (951) 031-90-52<br>
+            55-25-95 (доб. 3532)
+          </h3>
+
+          <p>
+            Мы принимаем заказы по будням с 10:00 до 17:00. Сообщите менеджеру нужные позиции и объём — специалист
+            сориентирует по стоимости и срокам.
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
