@@ -159,7 +159,7 @@
             <p>Телефон <span class="red">*</span></p>
             <input type="text" placeholder="Ваш номер телефона">
 
-            <button type="submit" class="btn form-button">
+            <button id="dev-btn" type="submit" class="btn form-button">
               ОТПРАВИТЬ ЗАЯВКУ
             </button>
           </form>
@@ -255,6 +255,11 @@
     }
     </script>
 
+  <script>
+    document.getElementById('dev-btn').addEventListener('click', function () {
+      alert('Функционал ещё в разработке');
+    });
+  </script>
   <script src="script.js"></script>
 
 </body>
