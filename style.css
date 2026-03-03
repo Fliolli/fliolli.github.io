@@ -701,7 +701,6 @@ footer {
 
 .my-table {
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     border-collapse: collapse;
     background: #fff;
@@ -770,8 +769,20 @@ footer {
     }
 }
 
+.price-table {
+    max-width: 800px;
+}
+
 .steel-table {
-    max-width: 1000px;
+    max-width: 1250px;
+}
+
+@media (max-width: 768px) {
+
+    .steel-table {
+        min-width: 800px;
+    }
+
 }
 
 /* Всё тело таблицы — слева */
