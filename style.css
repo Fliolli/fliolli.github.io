@@ -68,6 +68,15 @@ nav {
     }
 }
 
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 nav a {
     margin: 0 18px;
     text-decoration: none;
@@ -303,15 +312,15 @@ section {
 .about-title {
     max-width: 800px;
     line-height: 1.4;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 650;
     margin: 0 auto 70px;
 }
 
 @media (max-width: 768px) {
     .about-title {
         font-size: 21px;
-        font-weight: 700;
+        font-weight: 650;
     }
 }
 
@@ -351,7 +360,7 @@ section {
     width: 115px;
     height: 115px;
     margin: 0 auto 30px;
-    background: #E49900;
+    background: #e49800cd;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -366,7 +375,7 @@ section {
 }
 
 .about-item:hover .about-icon {
-    background: #e49800db;
+    background: #e49800ac;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -526,6 +535,7 @@ form input:focus {
 .form-right a {
     color: inherit;
     text-decoration: none;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -563,6 +573,13 @@ form input:focus {
 .contacts img {
     width: 700px;
     height: auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+
+.contacts img:hover {
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 768px) {
@@ -590,6 +607,8 @@ form input:focus {
 }
 
 .contacts a {
+    font-size: 18px;
+    font-weight: 400;
     color: inherit;
     text-decoration: none;
 }
@@ -598,7 +617,7 @@ form input:focus {
     text-decoration: underline;
 }
 
-.contact-right {
+.contacts-right {
     align-content: center;
 }
 
@@ -673,18 +692,14 @@ footer {
     transition: 0.3s;
 }
 
-.social_networks_lincs a:hover {
-    color: #eddfb5;
-}
+/* ===== TABLE ===== */
 
-/* ===== PRICE PAGE ===== */
-
-.price-wrapper {
+.table-wrapper {
     padding: 0px 20px 30px;
     overflow-x: auto;
 }
 
-.price-table {
+.my-table {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -698,16 +713,16 @@ footer {
 
 @media (max-width: 600px) {
 
-    .price-table {
+    .my-table {
         font-size: 14px;
     }
 }
 
-.price-table thead {
+.my-table thead {
     background: #f5f5f5;
 }
 
-.price-table th {
+.my-table th {
     padding: 18px;
     font-weight: 800;
     text-transform: uppercase;
@@ -715,44 +730,63 @@ footer {
     letter-spacing: 1px;
 }
 
-.price-table td {
+.my-table td {
     padding: 16px 18px;
     font-weight: 600;
     font-size: 15px;
 }
 
-.price-table th:first-child,
-.price-table td:first-child {
+.my-table th:first-child,
+.my-table td:first-child {
     text-align: left;
     width: 60px;
     color: #0000009a;
 }
 
-.price-table th:not(:first-child),
-.price-table td:not(:first-child) {
+.my-table th:not(:first-child),
+.my-table td:not(:first-child) {
     text-align: center;
 }
 
-.price-table tr:not(:last-child) td {
+.my-table tr:not(:last-child) td {
     border-bottom: 1px solid #eee;
 }
 
-.price-table th:not(:last-child),
-.price-table td:not(:last-child) {
+.my-table th:not(:last-child),
+.my-table td:not(:last-child) {
     border-right: 1px solid #f0f0f0;
 }
 
-.price-table tbody tr:hover {
+.my-table tbody tr:hover {
     background: rgba(228, 153, 0, 0.05);
     transition: 0.3s;
 }
 
 @media (max-width: 600px) {
 
-    .price-table th,
-    .price-table td {
+    .my-table th,
+    .my-table td {
         padding: 12px;
     }
+}
+
+.steel-table {
+    max-width: 1000px;
+}
+
+/* Всё тело таблицы — слева */
+.my-table.steel-table tbody td {
+    text-align: left;
+}
+
+/* Все заголовки по центру */
+.my-table.steel-table thead th {
+    text-align: center;
+}
+
+/* Первый заголовок — слева */
+.my-table.steel-table thead th:first-child {
+    text-align: left;
 }
 
 /* ===== BACK BUTTON ===== */
